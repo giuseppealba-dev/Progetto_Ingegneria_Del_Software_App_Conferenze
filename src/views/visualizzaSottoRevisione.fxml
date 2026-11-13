@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.VisualizzaSottoRevisioneController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+        <HBox alignment="TOP_LEFT" spacing="15.0">
+            <padding>
+                <Insets top="10" right="20" bottom="10" left="20"/>
+            </padding>
+            <Button text="Indietro" onAction="#handleBack"/>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true">
+            <VBox spacing="18.0" alignment="TOP_CENTER">
+                <padding>
+                    <Insets top="20" right="30" bottom="20" left="30"/>
+                </padding>
+                <Label text="Dettaglio Sottorevisione" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <Label text="SottoRevisore:" style="-fx-font-size: 15px;"/>
+                <Label fx:id="sottoRevisoreLabel" style="-fx-font-size: 15px;"/>
+                <Label text="Commento:" style="-fx-font-size: 15px;"/>
+                <TextArea fx:id="commentoArea" editable="false" wrapText="true" prefHeight="200" prefWidth="300" minHeight="200"/>
+                <Label text="Valutazione:" style="-fx-font-size: 15px;"/>
+                <Label fx:id="rateLabel" style="-fx-font-size: 15px;"/>
+                <Label text="Data:" style="-fx-font-size: 15px;"/>
+                <Label fx:id="dataLabel" style="-fx-font-size: 15px;"/>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

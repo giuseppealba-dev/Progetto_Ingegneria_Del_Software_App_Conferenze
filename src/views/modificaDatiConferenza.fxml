@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ScrollPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.ModificaDatiConferenzaController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+        <HBox alignment="TOP_LEFT" spacing="15.0">
+            <padding>
+                <Insets top="10" right="20" bottom="10" left="20"/>
+            </padding>
+            <Button text="Indietro" onAction="#handleBack"/>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true">
+            <VBox alignment="TOP_CENTER" spacing="15.0" prefWidth="600">
+                <padding>
+                    <Insets top="20" right="20" bottom="20" left="20"/>
+                </padding>
+                <Label text="Modifica date conferenza" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <Label text="Termine conferenza:"/>
+                <DatePicker fx:id="fineConferenzaPicker"/>
+                <Label text="Scadenza invio papers:"/>
+                <DatePicker fx:id="scadenzaSubmissionPicker"/>
+                <Label text="Scadenza revisione papers:"/>
+                <DatePicker fx:id="scadenzaReviewPicker"/>
+                <Label text="Scadenza accettazione papers:"/>
+                <DatePicker fx:id="scadenzaAcceptancePicker"/>
+                <Label text="Scadenza sottomissione papers finali:"/>
+                <DatePicker fx:id="scadenzaFinalSubmissionPicker"/>
+                <Label text="Data:"/>
+                <DatePicker fx:id="dataPicker"/>
+               
+               
+               
+                <Button fx:id="confermaButton" text="Conferma" onAction="#handleConferma" minWidth="180"/>
+                <Label fx:id="feedbackLabel" textFill="red" style="-fx-font-size: 14px;"/>
+            
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.RevisionaPaperController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+        <HBox alignment="TOP_LEFT" spacing="15.0">
+            <padding>
+                <Insets top="10" right="20" bottom="10" left="20"/>
+            </padding>
+            <Button text="Indietro" onAction="#handleBack"/>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true">
+            <VBox spacing="18.0" alignment="TOP_CENTER" minHeight="1500">
+                <padding>
+                    <Insets top="20" right="30" bottom="20" left="30"/>
+                </padding>
+                <Label fx:id="titoloLabel" style="-fx-font-size: 20px; -fx-font-weight: bold;" alignment="CENTER"/>
+                
+                <!-- Campo testo articolo molto grande -->
+                <TextArea fx:id="testoPaperArea" editable="false" wrapText="true" prefHeight="600" prefWidth="600" minHeight="600" />
+                
+                <Label text="Commento per autore:" style="-fx-font-size: 14px;"/>
+                <TextArea fx:id="commentoAutoreArea" promptText="Scrivi qui il commento per l'autore..." prefHeight="200" prefWidth="300" minHeight="200" />
+                
+                <Label text="Commento privato per Chair:" style="-fx-font-size: 14px;"/>
+                <TextArea fx:id="commentoChairArea" promptText="Scrivi qui il commento privato per il Chair..." prefHeight="200" prefWidth="300" minHeight="200" />
+                
+                <Label text="Valutazione (da -3 a +3):" style="-fx-font-size: 14px;"/>
+                <Spinner fx:id="rateSpinner" min="-3" max="3" initialValue="0" editable="true"/>
+                <Button text="Invia Revisione" onAction="#handleInviaRevisione" style="-fx-font-size: 15px;"/>
+                <Label fx:id="feedbackLabel" textFill="red"/>
+
+               
+                <Label text="Sottorevisioni ricevute:" style="-fx-font-size: 15px; -fx-font-weight: bold;"/>
+                <VBox fx:id="sottoRevisioniContainer" spacing="10.0" alignment="TOP_CENTER"/>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

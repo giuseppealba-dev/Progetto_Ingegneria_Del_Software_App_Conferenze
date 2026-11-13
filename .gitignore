@@ -1,0 +1,19 @@
+# File compilati Java
+bin/
+*.class
+
+# Database locale e file temporanei
+app.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Configurazioni e file generati dagli IDE
+.idea/
+*.iml
+.classpath
+.project
+
+# File di sistema
+.DS_Store
+Thumbs.db

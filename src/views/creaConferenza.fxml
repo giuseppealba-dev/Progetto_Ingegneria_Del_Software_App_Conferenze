@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import java.lang.String?>
+<?import javafx.scene.control.ScrollPane?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.CreaConferenzaController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+        <HBox alignment="TOP_LEFT">
+            <padding>
+                <Insets top="10.0" />
+            </padding>
+            <children>
+                <Button fx:id="backButton" text="Indietro" onAction="#handleHome" />
+            </children>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true">
+            <content>
+                <VBox alignment="CENTER" spacing="15.0">
+                    <padding>
+                        <Insets top="20.0" right="20.0" bottom="10.0" left="20.0"/>
+                    </padding>
+                    <children>
+
+                        <!-- Nome conferenza -->
+                        <Label text="Nome conferenza:" />
+                        <TextField fx:id="nameConferenceField" promptText="Inserisci nome" />
+                    
+
+                        <!-- Termine conferenza -->
+                        <Label text="Termine conferenza:" />
+                        <DatePicker fx:id="conferenzaDeadline" />
+
+                        <!-- Termine invio papers -->
+                        <Label text="Termine invio papers:" />
+                        <DatePicker fx:id="paperSubmissionDeadline" />
+
+                        <!-- Termine revisione papers -->
+                        <Label text="Termine revisione papers:" />
+                        <DatePicker fx:id="reviewDeadline" />
+                    
+
+                        <!-- Termine accettazione revisioni -->
+                        <Label text="Termine accettazione revisioni:" />
+                        <DatePicker fx:id="acceptanceDeadline" />
+                    
+
+                        <!-- Termine sottomissione papers finali -->
+                        <Label text="Termine sottomissione papers finali:" />
+                        <DatePicker fx:id="finalSubmissionDeadline" />
+                
+
+                        <!-- Numero minimo revisori -->
+                        <Label text="Numero minimo revisori per paper:" />
+                        <TextField fx:id="minReviewersField" promptText="Es. 2" />
+
+
+                        <!-- Numero massimo paper per revisore -->
+                        <Label text="Numero massimo paper per revisore:" />
+                        <TextField fx:id="maxPapersField" promptText="Es. 4" />
+            
+
+                        <!-- Tasso di accettazione -->
+                        <Label text="Tasso di competenza (in %):" />
+                        <TextField fx:id="acceptanceRateField" promptText="Es. 75" />
+    
+
+                        <!-- Luogo -->
+                        <Label text="Luogo:" />
+                        <TextField fx:id="locationField" promptText="Es. Roma, IT" />
+
+
+                        <!-- Data -->
+                        <Label text="Data:" />
+                        <DatePicker fx:id="dataPicker" />
+                
+
+                        <!-- Ora -->
+                        <Label text="Ora:" />
+                        <TextField fx:id="conferenceTimeField" promptText="Es. 10:00" />
+        
+
+                        <!-- Argomenti -->
+                        <Label text="Argomenti (separati da virgola):" />
+                        <TextField fx:id="topicsField" promptText="AI, Machine Learning, Cloud" />
+        
+
+        
+
+                        <Button fx:id="createButton" text="Crea Conferenza" onAction="#handleCreateConference" />
+                        
+                        <Label fx:id="feedbackLabel" textFill="red" wrapText="true" alignment="CENTER"/>
+                        
+                        
+                        <Label fx:id="feedbackLabel1" textFill="red" visible="false" alignment="CENTER"/>
+                        <Label fx:id="feedbackLabel2" textFill="red" visible="false" alignment="CENTER"/>
+                        <Label fx:id="feedbackLabel3" textFill="red" visible="false" alignment="CENTER"/>
+                        <Label fx:id="feedbackLabel4" textFill="red" visible="false" alignment="CENTER"/>
+                        <Label fx:id="feedbackLabel5" textFill="red" visible="false" alignment="CENTER"/>
+                        <Label fx:id="feedbackLabel6" textFill="red" visible="false" alignment="CENTER"/>
+                        
+                        
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>

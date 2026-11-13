@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.VisualizzaRevisioneChairController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+        <HBox alignment="TOP_LEFT" spacing="10">
+            <padding>
+                <Insets top="10" left="20" right="20" bottom="10"/>
+            </padding>
+            <Button text="Indietro" onAction="#handleBack"/>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true">
+                <VBox spacing="20.0" alignment="TOP_CENTER">
+                    <HBox spacing="10" alignment="CENTER">
+                        <Button text="Rifiuta Revisione" onAction="#handleRifiuta"/>
+                        <Button text="Accetta Revisione" onAction="#handleAccetta"/>
+                    </HBox>
+                    <Label fx:id="titoloLabel" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+                    <Label text="Commento per autore:" style="-fx-font-size: 15px;"/>
+                    <TextArea fx:id="commentoAutoreArea" editable="false" wrapText="true" prefHeight="200" prefWidth="300" minHeight="200"/>
+                    <Label text="Commento privato per Chair:" style="-fx-font-size: 15px;"/>
+                    <TextArea fx:id="commentoChairArea" editable="false" wrapText="true" prefHeight="200" prefWidth="300" minHeight="200"/>
+                    <Label text="Valutazione:" style="-fx-font-size: 15px;"/>
+                    <Label fx:id="rateLabel" style="-fx-font-size: 15px;"/>
+                    <Label text="Data:" style="-fx-font-size: 15px;"/>
+                    <Label fx:id="dataLabel" style="-fx-font-size: 15px;"/>
+                </VBox>
+            </ScrollPane>
+    </center>
+</BorderPane>

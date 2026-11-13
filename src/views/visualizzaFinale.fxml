@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.VisualizzaFinaleEditorController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+        <HBox alignment="TOP_LEFT" spacing="15.0">
+            <padding>
+                <Insets top="10" right="20" bottom="10" left="20"/>
+            </padding>
+            <Button text="Indietro" onAction="#handleBack"/>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true">
+            <VBox spacing="20.0" alignment="TOP_CENTER">
+                <padding>
+                    <Insets top="20" right="30" bottom="20" left="30"/>
+                </padding>
+                <Label fx:id="titoloLabel" style="-fx-font-size: 20px; -fx-font-weight: bold;" alignment="CENTER"/>
+                <TextArea fx:id="testoPaperArea" editable="false" wrapText="true" prefHeight="250" prefWidth="500"/>
+                <HBox spacing="15.0" alignment="CENTER">
+                    <Button text="Rifiuta" onAction="#handleRifiuta"/>
+                    <Button text="Crea versione stampabile" onAction="#handleCreaVersioneStampabile"/>
+                </HBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

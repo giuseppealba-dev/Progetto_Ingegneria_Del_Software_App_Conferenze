@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.RevisioneFinaleController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+        <HBox alignment="TOP_LEFT" spacing="15.0">
+            <padding>
+                <Insets top="10" right="20" bottom="10" left="20"/>
+            </padding>
+            <Button text="Indietro" onAction="#handleBack"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="statoLabel" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <Button fx:id="inviaEditorBtn" text="Invia a Editor" onAction="#handleInviaEditor"/>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true">
+            <VBox spacing="18.0" alignment="TOP_CENTER">
+                <Label text="Testo Paper (modificabile):" style="-fx-font-size: 15px;"/>
+                <TextArea fx:id="testoPaperArea"  editable="true" wrapText="true" prefHeight="600" prefWidth="600" minHeight="600"/>
+                <Label text="Commento del Revisore:" style="-fx-font-size: 15px;"/>
+                <TextArea fx:id="commentoRevisoreArea" editable="false" prefHeight="200" prefWidth="600" minHeight="200"/>
+                <Label text="Valutazione:" style="-fx-font-size: 15px;"/>
+                <Label fx:id="rateLabel" style="-fx-font-size: 15px;"/>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

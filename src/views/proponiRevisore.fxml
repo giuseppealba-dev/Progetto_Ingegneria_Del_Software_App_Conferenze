@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.ProponiRevisoreController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+        <HBox alignment="TOP_LEFT">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <Button text="Indietro" onAction="#handleBack"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox spacing="15.0" alignment="TOP_CENTER">
+            <padding>
+                <Insets top="20" right="30" bottom="20" left="30"/>
+            </padding>
+            <Label text="Seleziona un revisore da proporre" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+            <!-- Ogni revisore sarà aggiunto dal controller come HBox con Region per spingere il pulsante a destra -->
+            <VBox fx:id="revisoriContainer" spacing="10.0"/>
+        </VBox>
+    </center>
+</BorderPane>

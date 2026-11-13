@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.RevisionaSottoRevisoreController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <top>
+        <HBox alignment="TOP_LEFT" spacing="15.0">
+            <padding>
+                <Insets top="10" right="20" bottom="10" left="20"/>
+            </padding>
+            <Button text="Indietro" onAction="#handleBack"/>
+        </HBox>
+    </top>
+
+    <center>
+        <ScrollPane fitToWidth="true" fitToHeight="true">
+            <VBox spacing="18.0" alignment="TOP_CENTER" minHeight="1500">
+                <padding>
+                    <Insets top="20" right="30" bottom="20" left="30"/>
+                </padding>
+                <Label fx:id="titoloLabel" style="-fx-font-size: 20px; -fx-font-weight: bold;" alignment="CENTER"/>
+                <TextArea fx:id="testoPaperArea" editable="false" wrapText="true" prefHeight="200" prefWidth="300" minHeight="200"/>
+                <Label text="Commento per il Revisore:" style="-fx-font-size: 15px;"/>
+                <TextArea fx:id="commentoArea" promptText="Scrivi qui il commento..." prefHeight="200" prefWidth="300" minHeight="200"/>
+                <Label text="Valutazione (da -3 a +3):" style="-fx-font-size: 15px;"/>
+                <Spinner fx:id="rateSpinner" min="-3" max="3" initialValue="0" editable="true"/>
+                <Button text="Invia al Revisore" onAction="#handleInviaRevisione" style="-fx-font-size: 15px;"/>
+                <Label fx:id="feedbackLabel" textFill="red"/>
+            </VBox>
+        </ScrollPane>
+    </center>
+</BorderPane>

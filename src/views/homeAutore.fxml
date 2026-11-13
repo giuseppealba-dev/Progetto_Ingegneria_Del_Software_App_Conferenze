@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controllers.HomeAutoreController"
+            prefHeight="400.0" prefWidth="600.0">
+    <top>
+        <HBox alignment="TOP_LEFT" spacing="15.0">
+            <padding>
+                <Insets top="10" right="20" bottom="10" left="20"/>
+            </padding>
+            <Button text="Indietro" onAction="#handleBack"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20.0">
+            <padding>
+                <Insets top="30.0" left="20.0" right="20.0" bottom="20.0"/>
+            </padding>
+            <Button fx:id="datiConferenzaButton" text="Dati Conferenza" onAction="#handleDati" minWidth="200"/>
+            <Button fx:id="mieiArticoliButton" text="I miei papers" onAction="#goToMyArticles" minWidth="200"/>
+            <Button fx:id="sottomettiArticoloButton" text="Sottometti paper" onAction="#handleSubmitArticle" minWidth="200"/>
+            <Button fx:id="inserisciRuoloButton" text="Inserisci ruolo" onAction="#handleNewRole" minWidth="200"/>
+            
+        </VBox>
+    </center>
+
+</BorderPane>
