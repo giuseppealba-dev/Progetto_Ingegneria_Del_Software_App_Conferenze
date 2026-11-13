@@ -138,17 +138,6 @@ Gli articoli salvati come file vengono memorizzati nella cartella `uploads/`.
 
 Per una nuova installazione è possibile eliminare `app.db`: al successivo avvio l'applicazione ricreerà la struttura del database. I dati presenti nel database e nella cartella `uploads/` sono dati locali di test.
 
-## Documentazione di progetto
-
-La documentazione del progetto può essere completata aggiungendo al repository:
-
-- diagramma dei casi d'uso;
-- diagramma delle classi;
-- diagramma delle attività del processo di revisione;
-- diagramma di sequenza per la sottomissione e revisione di un articolo.
-
-Questi diagrammi descrivono i requisiti della specifica, gli attori coinvolti e le principali decisioni progettuali del sistema.
-
 ## Obiettivo didattico
 
 Il progetto applica i concetti di analisi e progettazione del software a un dominio con più attori, ruoli e flussi operativi. In particolare, il sistema mette in evidenza la separazione tra interfaccia grafica, logica applicativa e persistenza dei dati, oltre alla gestione delle relazioni tra utenti, conferenze, articoli e revisioni.
