@@ -85,7 +85,6 @@ App_Conferenze/
 │   └── sqlite-jdbc-3.49.1.0.jar
 ├── docs/
 │   └── screenshots/
-├── uploads/
 ├── .vscode/
 └── README.md
 ```
