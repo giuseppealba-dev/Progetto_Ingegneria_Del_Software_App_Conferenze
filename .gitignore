@@ -8,6 +8,10 @@ app.db
 *.db-wal
 *.db-shm
 
+# File caricati localmente dall'applicazione
+/uploads/
+/src/uploads/
+
 # Configurazioni e file generati dagli IDE
 .idea/
 *.iml
